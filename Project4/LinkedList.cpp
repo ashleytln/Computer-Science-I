@@ -1,5 +1,4 @@
 #include "LinkedList.h"
-#include "Node.cpp"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
