@@ -6,24 +6,6 @@
 LinkedList::LinkedList() {
 	head = nullptr;
 	size = 0;
-	//double c;
-	//int e;
-	//Node *ptr, *temp;
-	//// Randomly generate values for coefficient, exponent
-	//unsigned seed = static_cast<unsigned>(time(0));
-	//srand(seed);
-	//for (int i = 0; i < size; i++) {
-	//	c = ((rand() / static_cast<double>(RAND_MAX) * 100) - 20);
-	//	e = -100 + (rand() % (100 - (-100) + 1));
-	//	ptr = new Node(c, e), temp = head;
-	//	if (head == nullptr)
-	//		head = ptr;
-	//	else {
-	//		while (temp->getNext() != nullptr)
-	//			temp = temp->getNext();
-	//		temp->setNext(ptr);
-	//	}
-	//}
 }
 
 LinkedList::LinkedList(Node* h) {
