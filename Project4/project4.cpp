@@ -1,4 +1,4 @@
-#include "LinkedList.cpp"
+#include "LinkedList.h"
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
