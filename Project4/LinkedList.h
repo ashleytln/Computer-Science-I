@@ -8,7 +8,6 @@ class LinkedList {
 private:
 	Node* head = nullptr;
 	int size = 0;
-//	deleteList();
 public:
 	// Default constructor
 	LinkedList();
