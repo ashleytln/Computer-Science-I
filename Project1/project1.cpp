@@ -1,6 +1,3 @@
-// Name: Ashley Nguyen
-// NetID: atn210009
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,7 +5,6 @@ using namespace std;
 
 const int ARABIC_CHAR_FIELD = 4, ROMAN_CHAR_FIELD = 17;
 const string database = "numbers.txt";
-//your filestream for the database will connect to this variable
 
 /*
 * Function: checkArabicOrRoman
