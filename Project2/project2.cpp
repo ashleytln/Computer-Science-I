@@ -5,13 +5,15 @@
 
 using namespace std;
 
+// Function prototypes
 string checkRowValidity(shared_ptr<char[]>, shared_ptr<char[]>, int);
 string checkColumnValidity(shared_ptr<char[]>, shared_ptr<char[]>, int);
 char checkSectorValidity(shared_ptr<char[]>, shared_ptr<char[]>, int);
 void displayPuzzleValidity(string, shared_ptr<char[]>, shared_ptr<char[]>);
 
+// Driver program involving user input and file input parsing
 int main() {
-    // Dynamic memory allocation of array using smart pointers (extra credit)
+    // Dynamic memory allocation of array using smart pointers
     shared_ptr<char[]> puzzleptr(new char[81]);
     shared_ptr<char[]> nextptr = puzzleptr;
     ifstream infile;
@@ -115,11 +117,11 @@ string checkColumnValidity(shared_ptr<char[]> curr, shared_ptr<char[]> next, int
 *   shared_ptr<char[]> next: points to next value in row
 *   int count: represents row number of Sudoku puzzle
 * Returns:
-*   char: "v" - valid, meets all rules, contains spaces
+*   string: "v" - valid, meets all rules, contains spaces
 *         "s" - solved, valid with no spaces
 *         invalid - duplicate number, reason why sector violates Sudoku rules
 */
-char checkSectorValidity(shared_ptr<char[]> curr, shared_ptr<char[]> next, int count) {
+string checkSectorValidity(shared_ptr<char[]> curr, shared_ptr<char[]> next, int count) {
     // Created variables to store offset for curr and next pointers for easier offset notation and to increase program readability
     int hasSpace = 0, offsetI, offsetJ;
     // For upper 3 sectors
@@ -235,9 +237,9 @@ char checkSectorValidity(shared_ptr<char[]> curr, shared_ptr<char[]> next, int c
     }
     // Returns valid if sector contains spaces and no duplicates; otherwise, sector is solved
     if (hasSpace > 0)
-        return 'v';
+        return "v";
     else
-        return 's';
+        return "s";
 }
 
 /*
