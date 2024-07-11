@@ -4,17 +4,19 @@
 
 using namespace std;
 
+// Function prototypes
 string checkRowValidity(char*, char*, char*, int);
 string checkColumnValidity(char*, char*, char*, int);
 char checkSectorValidity(char*, char*, char*, int);
 void displayPuzzleValidity(string, char*, char*, char*);
 
+// Driver program for user input and file input parsing
 int main()
 {
     // Dynamic memory allocation of array
     char* puzzle = new char[81];
     // Storing address of puzzle's first element, used to reset puzzle pointer after storing puzzle values in array
-    char* ptr1 = puzzle, * ptr2 = nullptr;
+    char *ptr1 = puzzle, *ptr2 = nullptr;
     ifstream infile;
     string filename, puzzleNum, line;
 
@@ -126,7 +128,7 @@ string checkColumnValidity(char* arr, char* curr, char* next, int count) {
 *   char *next: points to next value in column
 *   int count: represents column number of Sudoku puzzle
 * Returns:
-*   char: "v" - valid, meets all rules, contains spaces
+*   string: "v" - valid, meets all rules, contains spaces
 *         "s" - solved, valid with no spaces
 *         invalid - duplicate number, reason why sector violates Sudoku rules
 */
@@ -245,9 +247,9 @@ char checkSectorValidity(char* arr, char* curr, char* next, int count) {
     }
     // Returns valid if sector contains spaces and no duplicates; otherwise, sector is solved
     if (hasSpace > 0)
-        return 'v';
+        return "v";
     else
-        return 's';
+        return "s";
 }
 
 /*
